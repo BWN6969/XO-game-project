@@ -65,6 +65,10 @@ def check_butt(x,y):
             
             if all_check(t):
                 print("égalité")
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4a454a920cb854c2411223d7a328e740483099f8
            
             
 
