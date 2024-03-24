@@ -11,14 +11,16 @@ from numpy import array as arr
 
 def saisir(value):
     a = int(input(f"choisir votre emplacement {value} ="))
-    while a>8 or a<0 or not ValueError:
+    while a>9 or a<1 or not ValueError:
         a = int(input(f"choisir votre emplacement {value} ="))
     return a
 
 def saisir_place(value):
     c = saisir(format(f"{value}"))
+    c-=1
     while tab[c] != "" :
         c = saisir(format(f"{value}"))
+        c-=1
     return c
 
 

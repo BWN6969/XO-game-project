@@ -1,6 +1,7 @@
 ''' import packages ...'''
 
 from import_pack import *
+
 labF()
 label("starting ...",-80)
 speed(15)
@@ -23,15 +24,12 @@ def check_butt(x,y):
     global tab
     for i in range(9):
         if x>=t[i]["boxPosX_ini"] and x<=t[i]["boxPosX"] and y>=t[i]["boxPosY_ini"] and y<=t[i]["boxPosY"]:
-            print(t[i]["boxN"])
             penup()
             goto(t[i]["boxPosX"]-75,(t[i]["boxPosY_ini"]))
             pendown()
-            print(t[i]["boxPosX_ini"]-t[i]["boxPosX"],t[i]["boxPosY_ini"]-t[i]["boxPosY"])
             if t[i]["empty"] :
                 if a=="O" :
                     tab[i] = "o"
-                    print(tab)
                     labF()
                     setheading(0)
                     hug(t[i]["boxPosX"]-75,t[i]["boxPosY_ini"])
@@ -47,7 +45,6 @@ def check_butt(x,y):
                     
                 else:
                     tab[i] = "x"
-                    print(tab)
                     kiss(t[i]["boxPosX_ini"],t[i]["boxPosY_ini"],t[i]["boxPosX"],t[i]["boxPosY"],0)
                     setheading(0)
                     kiss(t[i]["boxPosX"],t[i]["boxPosY_ini"],t[i]["boxPosX_ini"],t[i]["boxPosY"],1) 
@@ -68,7 +65,6 @@ def check_butt(x,y):
             
             if all_check(t):
                 print("égalité")
-            print(t)
            
             
 
