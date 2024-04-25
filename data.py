@@ -1,5 +1,4 @@
 from numpy import array
-from turtle import*
 from In_terminal import all_check_val,check_if_win,tab
 global t
 
@@ -35,11 +34,11 @@ def fill(t):
 
 def main(tab):
     if check_if_win(tab,"x") :
-        return "x est gagné"
+        return "X won"
     elif check_if_win(tab,"o") :
-        return "o est gagné"
+        return "O won"
     elif all_check_val(tab) :
-        return "égalité"
+        return "draw"
     
 ''' fill the data ...'''
 fill(t)

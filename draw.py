@@ -1,5 +1,4 @@
 from turtle import *
-from data import t
 from random import choice
 
 ''' draw a box ...'''
@@ -33,7 +32,6 @@ def label(text,x):
     pencolor("white")
     write(text,font=("verdana",20))
     pencolor('black')
-    
     
 ''' draw a kiss ...'''
 
@@ -137,7 +135,7 @@ def frame():
 def limitsPos():
     penup()
     pensize(5)
-    x =choice(['pink','#66b3ff','#66ffc2','#CD5C5C','#6666ff','#d9b38c'])
+    x =choice(['pink','#66b3ff','#66ffc2','#CD5C5C','#6666ff','#d9b38c','#FF8A08','#77B0AA','#0C2D57'])
     bgcolor(x)
     goto(125,0)
     frame()

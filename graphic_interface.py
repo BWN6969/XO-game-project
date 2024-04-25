@@ -2,13 +2,14 @@
 
 from import_pack import *
 
+''' starting phase ...'''
+
 labF()
 label("starting ...",-80)
 speed(15)
 color = limitsPos()
 pensize(1)
 draw_boxs()
-
 a = choice(["X","O"])
 labF()
 label(f"{a} turn ",-45)
@@ -32,11 +33,11 @@ def check_butt(x,y):
                     hug(t[i]["boxPosX"]-75,t[i]["boxPosY_ini"],color)
                     if main(tab):
                         labF()
-                        if main(tab) =="égalité":
-                            pa = -50
+                        if main(tab) =="draw":
+                            step = -35
                         else:
-                            pa = -80
-                        label(f"{main(tab)}",pa)
+                            step = -45
+                        label(f"{main(tab)}",step)
                         sleep(1)
                         exit()
                     else:
@@ -50,11 +51,11 @@ def check_butt(x,y):
                     kiss(t[i]["boxPosX"],t[i]["boxPosY_ini"],t[i]["boxPosX_ini"],t[i]["boxPosY"],1) 
                     if main(tab):
                         labF()
-                        if main(tab) =="égalité":
-                            pa = -50
+                        if main(tab) =="draw":
+                            step = -35
                         else:
-                            pa = -80
-                        label(f"{main(tab)}  ",pa)
+                            step = -45
+                        label(f"{main(tab)}  ",step)
                         sleep(1)
                         exit()
                     else:
@@ -67,12 +68,7 @@ def check_butt(x,y):
                 labF()
                 label("place already taken",-135)
 
-                
-
-           
-            
-
-                
+                            
 onscreenclick(check_butt)
 
 

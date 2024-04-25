@@ -1,7 +1,6 @@
 ''' import packages...'''
 
-from turtle import * 
-from numpy import array
+from turtle import *
 from data import t,main
 from draw import kiss,hug,label_frame as labF , label,draw_boxs,limitsPos
 from random import choice
