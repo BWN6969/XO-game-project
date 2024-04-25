@@ -28,25 +28,19 @@ def fill(t):
             t[i]["boxPosX"]=t[i]["boxPosX_ini"]+150
             t[i]["boxPosY"] =t[i]["boxPosY_ini"]+150
 
-'''check if there is no place to pick ...'''
 
-def all_check(t):
-    for i in range(9):
-        if t[i]["empty"] :
-            return False
-    return True
+ 
 
 '''check win or equality ...'''
 
 def main(tab):
-    a = check_if_win(tab,"x")        #check if x won
-    if a :
+    if check_if_win(tab,"x") :
         return "x est gagné"
-    if all_check_val(tab) :
-        return "égalité"
-    a = check_if_win(tab,"o")     #check if o won
-    if a :
+    elif check_if_win(tab,"o") :
         return "o est gagné"
-    if all_check_val(tab) :
+    elif all_check_val(tab) :
         return "égalité"
+    
+''' fill the data ...'''
 fill(t)
+

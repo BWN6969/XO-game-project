@@ -74,7 +74,7 @@ def kiss(x,y,z,d,n):
         
 '''draw a hug ...'''
 
-def hug(x,y):
+def hug(x,y,z):
     penup()
     goto(x,y)
     pendown()
@@ -85,7 +85,7 @@ def hug(x,y):
     penup()
     goto(x,y+20)
     pendown()
-    fillcolor("white")
+    fillcolor(z)
     begin_fill()
     circle(55)
     end_fill()
@@ -137,7 +137,8 @@ def frame():
 def limitsPos():
     penup()
     pensize(5)
-    bgcolor(choice(['pink','#66b3ff','#66ffc2','#CD5C5C','#6666ff','#d9b38c']))
+    x =choice(['pink','#66b3ff','#66ffc2','#CD5C5C','#6666ff','#d9b38c'])
+    bgcolor(x)
     goto(125,0)
     frame()
     penup()
@@ -152,5 +153,6 @@ def limitsPos():
     goto(0,100)
     left(90)
     frame()
-    
+    return x
+
     
