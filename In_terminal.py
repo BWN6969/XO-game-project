@@ -26,36 +26,31 @@ def saisir_place(value):
 
 ''' check if x or o won ...'''
 
-def check_if_win(x,z):
-    for i in range(0,len(x),3):
-        a = x[i]+x[i+1]+x[i+2] ==z*3
-        if a :
-            return a
-    for i in range(0,3):
-        a = x[i]+x[i+3]+x[i+6] ==z*3
-        if a :
-            return a
-    a  = x[0]+x[4]+x[8] ==z*3
-    if a :
-        return a
-    a  = x[2]+x[4]+x[6]==z*3
-    if a :
-        return a
+def check_if_win(tab,elem):
+    for i in range(0,len(tab),3):
+        if tab[i]+tab[i+1]+tab[i+2] ==elem*3:
+            return True
+    for i in range(3):
+        if tab[i]+tab[i+3]+tab[i+6] ==elem*3:
+            return True
+    if tab[0]+tab[4]+tab[8] ==elem*3 or tab[2]+tab[4]+tab[6]==elem*3:
+        return True
+
     return False
 
 ''' check if there is no place to pick ...'''
 
 def all_check_val(tab):
     for i in range(9):
-        if tab[i] =="" :
+        if tab[i] =="":
             return False
     return True
 
 ''' affichage ...'''
 
-def afficher(a):
-    for i in range(0,len(a),3):
-        print(a[i],"|",a[i+1],"|",a[i+2])
+def afficher(tab):
+    for i in range(0,len(tab),3):
+        print(tab[i],"|",tab[i+1],"|",tab[i+2])
         
 ''' main function ...'''
 
@@ -64,8 +59,7 @@ def main(tab):
     tab[saisir_place(format("o"))] = "o"
     while not(check_if_win(tab,"x")  and check_if_win(tab,"o")):
         tab[saisir_place(format("x"))] = "x"
-        a = check_if_win(tab,"x")        #check if x won
-        if a :
+        if check_if_win(tab,"x") :   #check if x won
             afficher(tab)
             print("x est gagné")
             break
@@ -74,8 +68,7 @@ def main(tab):
             print("égalité")
             break
         tab[saisir_place(format("o"))] = "o"
-        a = check_if_win(tab,"o")     #check if o won
-        if a :
+        if check_if_win(tab,"o") :   #check if o won
             afficher(tab)
             print("o est gagné")
             break

@@ -25,7 +25,6 @@ def label_frame():
 ''' write a text ...'''
 
 def label(text,x):
-    
     penup()
     goto(x,-370)
     pendown()
@@ -38,51 +37,44 @@ def label(text,x):
 def kiss(x,y,z,d,n):
     fillcolor('black')
     if n==0:
-        penup()
+        pu()
         goto(x+20,y)
-        pendown()
+        pd()
         begin_fill()
         lt(45)
         goto(z,d-20)
-        lt(45)
-        goto(z,d)
-        lt(45)
+        circle(14.32,180)
         goto(z-20,d)
-        lt(90)
         goto(x,y+20)
-        lt(45)
-        goto(x,y)
+        circle(14.32,180)
         end_fill()
     else :
         begin_fill()
-        penup()
+        pu()
         goto(x-20,y)
-        pendown()
+        pd()
         lt(45)
-        goto(z,d-20)
+        goto(z,d-20) 
         lt(45)
-        goto(z,d)
-        lt(45)
+        circle(-14.32,180)
         goto(z+20,d)
-        lt(90)
         goto(x,y+20)
-        lt(45)
-        goto(x,y)
+        circle(-14.32,180)
         end_fill()
-        
+
 '''draw a hug ...'''
 
 def hug(x,y,z):
-    penup()
+    pu()
     goto(x,y)
-    pendown()
+    pd()
     fillcolor('black')
     begin_fill()
     circle(75)
     end_fill()
-    penup()
+    pu()
     goto(x,y+20)
-    pendown()
+    pd()
     fillcolor(z)
     begin_fill()
     circle(55)
@@ -91,11 +83,11 @@ def hug(x,y,z):
 ''' draw boxs frame'''
 
 def draw_boxs():
-    penup()
+    pu()
     goto(-285,135)
     x =-285
     y = 135
-    pendown()
+    pd()
     for k in range(3):
         for j in range(3):
             box()
@@ -103,10 +95,10 @@ def draw_boxs():
             left(-90)
             fd(60)
             pendown()
-        penup()
+        pu()
         goto(x,y-215)
         y -=215
-        pendown()
+        pd()
         
         
 ''' syntax decrease ...'''
@@ -122,7 +114,7 @@ def frame():
     fillcolor('black')
     begin_fill()
     lt(90)
-    pendown()
+    pd()
     fd(300)
     l1Help()
     fd(600)
@@ -133,21 +125,21 @@ def frame():
 ''' gonna put where the limits at ...'''
 
 def limitsPos():
-    penup()
+    pu()
     pensize(5)
     x =choice(['pink','#66b3ff','#66ffc2','#CD5C5C','#6666ff','#d9b38c','#FF8A08','#77B0AA','#0C2D57'])
     bgcolor(x)
     goto(125,0)
     frame()
-    penup()
+    pu()
     goto(-125,0)
     left(90)
     frame()
-    penup()
+    pu()
     goto(0,-100)
     left(-180)
     frame()
-    penup()
+    pu()
     goto(0,100)
     left(90)
     frame()

@@ -1,5 +1,5 @@
 from numpy import array
-from In_terminal import all_check_val,check_if_win,tab
+from In_terminal import all_check_val,check_if_win
 global t
 
 t = array([dict(boxN = int(),boxPosX_ini = float(),boxPosY_ini = float(),boxPosX = float(),boxPosY = float(),empty=True)]*9)
@@ -32,11 +32,9 @@ def fill(t):
 
 '''check win or equality ...'''
 
-def main(tab):
-    if check_if_win(tab,"x") :
-        return "X won"
-    elif check_if_win(tab,"o") :
-        return "O won"
+def main(tab,elem):
+    if check_if_win(tab,elem) :
+        return elem.upper()+" won"
     elif all_check_val(tab) :
         return "draw"
     
