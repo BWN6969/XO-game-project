@@ -48,7 +48,7 @@ def kiss(x,y,z,d,n):
         goto(x,y+20)
         circle(14.32,180)
         end_fill()
-    else :
+    else : 
         begin_fill()
         pu()
         goto(x-20,y)
@@ -64,7 +64,7 @@ def kiss(x,y,z,d,n):
 
 '''draw a hug ...'''
 
-def hug(x,y,z):
+def hug(x,y,color_inside):
     pu()
     goto(x,y)
     pd()
@@ -75,7 +75,7 @@ def hug(x,y,z):
     pu()
     goto(x,y+20)
     pd()
-    fillcolor(z)
+    fillcolor(color_inside)
     begin_fill()
     circle(55)
     end_fill()
@@ -127,7 +127,7 @@ def frame():
 def limitsPos():
     pu()
     pensize(5)
-    x =choice(['pink','#66b3ff','#66ffc2','#CD5C5C','#6666ff','#d9b38c','#FF8A08','#77B0AA','#0C2D57'])
+    x =choice(['pink','#66b3ff','#66ffc2','#CD5C5C','#6666ff','#d9b38c','#FF8A08','#77B0AA','#0C2D57','#FFFAB7'])
     bgcolor(x)
     goto(125,0)
     frame()
